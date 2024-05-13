@@ -1,17 +1,39 @@
 .carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+
 }
+
 
 .carousel-inner {
-    display: flex;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
-.carousel img {
+/* .carousel img {
     display: none;
     width: 100%;
     height: auto;
+    object-fit: cover;
+} */
+
+img {
+    object-fit: fill;
+    max-width: 100%;
+    /* Ensure the image never exceeds the container width */
+    /* height: auto; */
+    /* Let the browser calculate the height to maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+    /* Ensure the image is displayed as a block element */
+}
+
+.active-slide {
+    max-height: 100%;
+    width: auto;
+    max-height: auto;
 }
 
 .prev,
